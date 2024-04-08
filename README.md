@@ -1,4 +1,3 @@
-
 # Ruby on rails project
 
 Ruby version  3.2.0
