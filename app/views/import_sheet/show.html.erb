@@ -1,0 +1,21 @@
+<!-- app/views/import_sheet/show.html.erb -->
+<h1>Imported Excel Sheet</h1>
+
+<table>
+  <thead>
+    <tr>
+      <% @spreadsheet.row(1).each do |header| %>
+        <th><%= header %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% (2..@spreadsheet.last_row).each do |i| %>
+      <tr>
+        <% @spreadsheet.row(i).each do |cell| %>
+          <td><%= cell %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
